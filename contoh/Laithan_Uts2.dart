@@ -22,7 +22,7 @@ class MyProfil extends StatelessWidget {
   final String name = 'Rayhan Ihsan Fadhilah';
   final String nim = '1126180062';
   final String prodi = 'TI';
-  final String role = 'Mahasiswa & Software Enginering';
+  final String role = 'Mahasiswa Global Institut';
 
   final List<String> mataKuliah = [
     'RPL',
@@ -31,7 +31,7 @@ class MyProfil extends StatelessWidget {
     'SISTEM PAKAR',
     'PBO',
     'ERP',
-    'VISUAL  II',
+    'VISUAL II',
   ];
 
   @override
@@ -172,6 +172,19 @@ class MyProfil extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: Duration(seconds: 2),
+            content: Text('Anda Bisa Menambahkan Mata Kuliah'),
+            backgroundColor: Colors.green,
+            ),
+          );
+      },
+      mini: true,
+      child: Icon(Icons.add, color: Colors.white,),
+      backgroundColor: Colors.green,
       ),
     );
   }
