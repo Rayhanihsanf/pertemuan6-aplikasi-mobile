@@ -20,23 +20,26 @@ class MainApp extends StatelessWidget {
 
 class ProfilSaya extends StatelessWidget {
   const ProfilSaya({super.key});
+  final String nama = 'Rayhan Ihsan Fadhilah';
+  final String nim = '1126180062';
+  final String prodi = 'Teknik Informatika';
+  final String role = 'Mahasiswa Global Institut';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Profil Rayhan Ihsan F',
+          'Profil Rayhan Ihsan Fadhilah',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
       ),
-      body: Center(
-        child: Padding(
+      body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 40,
@@ -45,23 +48,23 @@ class ProfilSaya extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                'Rayhan Ihsan Fadhilah',
+                nama,
                 style: TextStyle(
                   fontSize: 16, 
                   fontWeight: FontWeight.bold),
                 ),
               Text(
-                '1126180062', 
+                nim, 
                 style: TextStyle(
                   fontSize: 14)
                   ),
               Text(
-                'Teknik Informatika', 
+                prodi, 
                 style: TextStyle(
                   fontSize: 14)
                   ),
               Text(
-                'Mahasiswa Global Institut', 
+                role, 
                 style: TextStyle(
                   fontSize: 14)
                   ),
@@ -111,7 +114,6 @@ class ProfilSaya extends StatelessWidget {
             ],
           ),
         ),
-      ),
       floatingActionButton: FloatingActionButton(onPressed: (){
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
